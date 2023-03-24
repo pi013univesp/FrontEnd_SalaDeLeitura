@@ -1,0 +1,141 @@
+* {
+  padding: none;
+  margin: none;
+  text-decoration: none;
+}
+
+body {
+  width: "100%";
+  background-color: #1c1c1a;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  height: 20px;
+  width: 300px;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+
+.botao1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 147px;
+  height: 33px;
+  color: burlywood;
+  border: none;
+  background-color: #1c1c1a;
+}
+.botao1:hover {
+  background-color: black;
+}
+
+.centralizar {
+  display: flex;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  position: absolute;
+  top: 4.6rem;
+  right: 1.5rem;
+  background-color: #d2b48d;
+  width: 806px;
+  height: 500px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 100px;
+  height: 70px;
+  border-bottom: 4px solid #ae7c3d;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ae7c3d;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  color: rgb(255, 255, 255);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(85, 85, 85);
+}
+
+@media screen and (max-width: 768px) {
+  
+  .logo {
+    display: block;
+  }
+
+  .header-container {
+    display:flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .nav-items {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    top: 5.1rem;
+    z-index: 1;
+  }
+
+  .nav-items.open {
+    display: block;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-items li {
+    margin-bottom: 10px;
+  }
+}
