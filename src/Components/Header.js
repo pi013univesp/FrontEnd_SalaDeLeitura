@@ -2,11 +2,13 @@ import "../App.css";
 import React, { useState } from "react";
 import CadastroForm from "./Cadastro";
 import LoginForm from "./Login";
+import QuemSomos from "./QuemSomos";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [openCadastro, setOpenCadastro] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
+  const [openQuemSomos, setOpenQuemSomos] = useState(false);
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
@@ -23,7 +25,8 @@ function Header() {
       <nav className={`nav-items ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="#">Quem Somos</a>
+            <a href="#" onClick={() => setOpenQuemSomos((prev) => !prev)}>
+              Quem Somos</a>
           </li>
           <li>
             <a href="#" onClick={() => setOpenCadastro((prev) => !prev)}>
@@ -40,6 +43,7 @@ function Header() {
 
       {openCadastro && <CadastroForm />}
       {openLogin && <LoginForm />}
+      {openQuemSomos && <QuemSomos />}
     </div>
   );
 }
