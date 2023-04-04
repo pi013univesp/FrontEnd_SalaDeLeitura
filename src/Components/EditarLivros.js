@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import api from "../service/api";
 
-const CadastroLivros = () => {
+const EditarLivros = () => {
 
     async function enviarFormulario(event) {
         console.log("exemplo")
@@ -27,7 +27,7 @@ const CadastroLivros = () => {
         <div className="CadastroLivros">
             <div className="centralizar">
                 <center>
-                    <h2>Cadastro Livros</h2>
+                    <h2>Editar</h2>
                     <form onSubmit={enviarFormulario} >
                         <input type="text" placeholder="Título" id="titulolivro" required />
                         <input type="text" placeholder="Tema/Genero" id="Tema" required />
@@ -37,7 +37,10 @@ const CadastroLivros = () => {
                         <input type="text" placeholder="Resumo" id="resumo" required />
 
                         <button className="botao1" type="submit">
-                            Cadastrar
+                            salvar
+                        </button>
+                        <button className="botao1" type="submit">
+                            Exluir
                         </button>
                     </form>
                 </center>
@@ -46,4 +49,4 @@ const CadastroLivros = () => {
     );
 }
 
-export default CadastroLivros;
+export default EditarLivros;

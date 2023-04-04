@@ -9,23 +9,23 @@ const QuemSomos = () => {
                 <center>
                     <h2>Quem Somos</h2>
                     <p>
-                        Estudantes de graduação do curso do Eixo computação da Univesp.
-                        Esse site é resultado da diciplina do Projeto Integrador I - 2023
+                        Estudantes de graduação do curso do Eixo computação da Univesp. <br />
+                        Esse site é resultado da diciplina do Projeto Integrador I - 2023 <br />
                         Sob orientação do Profº. e orientador: Guilherme Vieira Barbosa.
-                    </p> 
+                    </p>
 
                     <p>
-                        Integrantes:
-                        Anderson da Silva Procopio Bernardo
-                        Julia Quevedo Matsucura
-                        Lais Pereira de Paula
-                        Lucas Damasceno Viana Alves
-                        Marcos Paulo Dias Silva
-                        Mario Matsucura
-                        Michel Lourenco Fernandes
-                        Vanessa Correa da Silva 
+                        Integrantes: <br />
+                        Anderson da Silva Procopio Bernardo <br />
+                        Julia Quevedo Matsucura <br />
+                        Lais Pereira de Paula <br />
+                        Lucas Damasceno Viana Alves <br />
+                        Marcos Paulo Dias Silva <br />
+                        Mario Matsucura <br />
+                        Michel Lourenco Fernandes <br />
+                        Vanessa Correa da Silva <br />
                     </p>
-                    <img/>
+                    <img />
                 </center>
             </div>
         </div>
