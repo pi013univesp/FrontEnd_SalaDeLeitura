@@ -1,15 +1,16 @@
 import React from "react";
-import Header from "./Components/Header.js";
-import CadastroLivros from "./Components/CadastroLivros.js";
-import Carrossel from "./Components/Carrossel.js";
+import Routes from "./Rotas";
+import { BrowserRouter } from 'react-router-dom';
+import Header from "./Components/Header"
 
 export default function App() {
 
   return (
-    <div className="App">
-      <Header />
-      <Carrossel />
-
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header/>
+        <Routes />
+      </div>
+    </BrowserRouter>
   );
 }

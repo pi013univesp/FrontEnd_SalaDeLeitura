@@ -1,14 +1,9 @@
-import "../App.css";
+// import "../App.css";
 import React, { useState } from "react";
-import CadastroForm from "./Cadastro";
-import LoginForm from "./Login";
-import QuemSomos from "./QuemSomos";
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [openCadastro, setOpenCadastro] = useState(false);
-  const [openLogin, setOpenLogin] = useState(false);
-  const [openQuemSomos, setOpenQuemSomos] = useState(false);
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
@@ -16,34 +11,33 @@ function Header() {
 
   return (
     <div className="header-container">
-      <div className="logo">
-        <h1>Sala de Leitura</h1>
-      </div>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <div className="logo">
+          <h1>Sala de Leitura</h1>
+        </div>
+      </Link>
       <button className="menu-button" onClick={handleMenuClick}>
         <span className="menu-icon">&#9776;</span>
       </button>
       <nav className={`nav-items ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="#" onClick={() => setOpenQuemSomos((prev) => !prev)}>
-              Quem Somos</a>
+            <Link to="/quem-somos">
+              Quem Somos
+            </Link>
           </li>
           <li>
-            <a href="#" onClick={() => setOpenCadastro((prev) => !prev)}>
+            <Link to="/cadastro">
               Cadastro
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" onClick={() => setOpenLogin((prev) => !prev)}>
+            <Link to="/login">
               Login
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
-
-      {openCadastro && <CadastroForm />}
-      {openLogin && <LoginForm />}
-      {openQuemSomos && <QuemSomos />}
     </div>
   );
 }

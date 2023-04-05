@@ -25,7 +25,6 @@ const QuemSomos = () => {
                         Michel Lourenco Fernandes <br />
                         Vanessa Correa da Silva <br />
                     </p>
-                    <img />
                 </center>
             </div>
         </div>
