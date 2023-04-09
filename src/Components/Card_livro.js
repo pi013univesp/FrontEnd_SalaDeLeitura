@@ -1,9 +1,11 @@
 import React from "react";
 import Carousel from 'react-elastic-carousel';
+import './carousel.css';
 
 export default function Card_livro() {
   const breakPoints = [
-    {width: 500, itemsToShow: 5}
+    {width: 900, itemsToShow: 5},
+    
   ]
 
   return (

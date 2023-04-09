@@ -14,6 +14,7 @@ const CadastroLivros = () => {
             autor: event.target.autor.value,
             estoque: event.target.estoque.value,
             resumo: event.target.resumo.value,
+            foto: event.target.foto.value,
         };
         try {
             await api.post('/library/#', dados);
@@ -25,23 +26,47 @@ const CadastroLivros = () => {
     }
     return (
         <div className="CadastroLivros">
-            <div className="centralizar">
-                <center>
-                    <h2>Cadastro Livros</h2>
-                    <form onSubmit={enviarFormulario} >
-                        <input type="text" placeholder="Título" id="titulolivro" required />
-                        <input type="text" placeholder="Tema/Genero" id="Tema" required />
-                        <input type="text" placeholder="Editora" id="editora" required />
-                        <input type="text" placeholder="Autor" id="autor" required />
-                        <input type="number" placeholder="estoque" id="estoque" required />
-                        <input type="text" placeholder="Resumo" id="resumo" required />
 
-                        <button className="botao1" type="submit">
-                            Cadastrar
-                        </button>
-                    </form>
+            <h2 className="NovoRegistro">Novo Registro</h2>
+            <form onSubmit={enviarFormulario} >
+                <table className="CadLivros">
+                    <tr>
+                        <td className="CadLivrosLateralesq">
+                            <input type="text" placeholder="Título" id="titulolivro" required />
+                            <input type="text" placeholder="Tema/Genero" id="Tema" required />
+                            <input type="text" placeholder="Autor" id="autor" required />
+                            <input type="text" placeholder="Editora" id="editora" required />
+                        </td>
+
+                        <td className="CadLivrosLateraldir">
+                            <tr>
+                                <h3>Estoque:</h3>
+                                <input label="Estoque" type="number" placeholder="estoque" id="estoque" required />
+                            </tr>
+                            <tr>
+                                <h3>Capa:</h3>
+                                <input type="text" placeholder="adicionar foto" id="foto" required />
+                            </tr>
+                            <br />
+                            <br/>
+                            <br/>
+                            <br/>
+                          
+                        </td>
+                    </tr>
+                </table>
+                <div className="resumo" >
+                    <textarea type="text" placeholder="Resumo" id="resumo" required />
+                </div>
+
+                <center>
+                    <button className="botao1" type="submit">
+                        Cadastrar
+                    </button>
                 </center>
-            </div>
+            </form>
+
+
         </div>
     );
 }

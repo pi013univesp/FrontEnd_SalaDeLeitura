@@ -151,14 +151,50 @@ nav a:hover {
 }
 
 /* cadastro/edição +... dos livros*/
+.NovoRegistro {
+  display: flex;
+  font-family: Lora;
+  color:black;
+  margin-bottom: 10px;
+}
 .CadastroLivros {
   position: absolute;
+  padding-left: 30px;
   top: 10rem;
-  right: 7.5rem;
+  right: 7rem;
   background-color: #AE7C3D;
-  width: 806px;
-  height: 500px;
+  width: 815px;
+  height: 450px;
+  position: fixed;
 }
+.resumo {
+  display: flex;
+  border: none;
+  margin-bottom: 20px;
+}.resumo textarea {
+  padding: 5px;
+  height: 100px;
+  width: 786px;
+}
+
+.CadLivrosLateralesq {
+    width: 350px;
+  }.CadLivrosLateralesq input {
+    height: 25px;
+  }
+  
+.CadLivrosLateraldir {
+    width: 200px;    
+  }.CadLivrosLateraldir input {
+    width: 150px;
+    height: 25px;
+  }.CadLivrosLateraldir tr {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    font-size: 12px;
+    font-weight:none;
+  }
 
 .botao2 {
   display: flex;
@@ -174,5 +210,83 @@ nav a:hover {
 .botao2:hover {
   background-color: black;
 }
+.BotaoEditar {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}.BotaoEditar button {
+  margin-left: 20px;
+}
 
-/*Carrossel*/
+/* menu*/
+
+.Menu {
+  display: flex;
+  position: absolute;
+  background-color: #1c1c1a;
+  top: 5rem;
+  right: 7rem;
+  width: 1150px;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+.Menu table tr td a{
+  font-family: Lora;
+  font-size: 24px;
+  margin-right: 10px;
+  color:#ffffff;
+  font-weight: bold;
+
+}
+.Buscar {
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}.Buscar input  {
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+/*Lista de livros Cadastrados*/
+
+.LivrosCadastrados {
+  display:flex;
+  position: absolute;
+  flex-direction: column;
+  top: 10rem;
+  right: 60.5rem;
+  height: 450px;
+  width: 290px;
+  padding: none;
+  align-content: flex-start;
+  background-color: #AE7C3D;
+}.LivrosCadastrados .CabecarioLivros {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #1c1c1a 5px solid;
+}.LivrosCadastrados .CabecarioLivros h2 {
+  display: flex;
+  color: black;
+  margin-bottom: 5px;
+  align-self: self-end;
+}
+
+
+.LivrosCadastrados .ListaLivros {
+  display: flex;
+  overflow-y: scroll;
+  background-color: #AE7C3D;
+}
+.LivrosCadastrados .ListaLivros tr p {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  color: black;
+}
