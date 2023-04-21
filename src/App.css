@@ -5,6 +5,7 @@
 }
 
 body {
+  width: "100%";
   background-color: #1c1c1a;
 }
 
@@ -29,6 +30,7 @@ input {
   color: burlywood;
   border: none;
   background-color: #1c1c1a;
+  cursor: pointer;
 }
 .botao1:hover {
   background-color: black;
@@ -60,7 +62,6 @@ input {
 }
 
 .logo {
-  color: #ae7c3d;
   font-family: Cinzel;
   font-size: 24px;
   font-weight: 700;
@@ -68,6 +69,11 @@ input {
   letter-spacing: 0em;
   text-align: left;
 
+}
+
+.logoLink {
+  text-decoration: none;
+  color: #ae7c3d;
 }
 
 .menu-button {
@@ -122,7 +128,7 @@ nav a:hover {
 
   .nav-items {
     display: none;
-
+    position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
@@ -146,13 +152,50 @@ nav a:hover {
 }
 
 /* cadastro/edição +... dos livros*/
-.CadastroLivros {
-  top: 10rem;
-  right: 7.5rem;
-  background-color: #AE7C3D;
-  width: 806px;
-  height: 500px;
+.NovoRegistro {
+  display: flex;
+  font-family: Lora;
+  color:black;
+  margin-bottom: 10px;
 }
+.CadastroLivros {
+  position: absolute;
+  padding-left: 30px;
+  top: 10rem;
+  right: 7rem;
+  background-color: #AE7C3D;
+  width: 815px;
+  height: 450px;
+  position: fixed;
+}
+.resumo {
+  display: flex;
+  border: none;
+  margin-bottom: 20px;
+}.resumo textarea {
+  padding: 5px;
+  height: 100px;
+  width: 786px;
+}
+
+.CadLivrosLateralesq {
+    width: 350px;
+  }.CadLivrosLateralesq input {
+    height: 25px;
+  }
+  
+.CadLivrosLateraldir {
+    width: 200px;    
+  }.CadLivrosLateraldir input {
+    width: 150px;
+    height: 25px;
+  }.CadLivrosLateraldir tr {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    font-size: 12px;
+    font-weight:none;
+  }
 
 .botao2 {
   display: flex;
@@ -168,65 +211,83 @@ nav a:hover {
 .botao2:hover {
   background-color: black;
 }
-
-/*Carrossel*/
-
-.AlinharCarrossel {
+.BotaoEditar {
   display: flex;
+  flex-direction: row;
+  justify-content:center;
+}.BotaoEditar button {
+  margin-left: 20px;
+}
+
+/* menu*/
+
+.Menu {
+  display: flex;
+  position: absolute;
+  background-color: #1c1c1a;
+  top: 5rem;
+  right: 7rem;
+  width: 1150px;
+  flex-direction: row;
+  justify-content:space-between;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 0 10px;
-
+}
+.Menu table tr td a{
+  font-family: Lora;
+  font-size: 24px;
+  margin-right: 10px;
+  color:#ffffff;
+  font-weight: bold;
 
 }
-.Wrapper {
-  max-width: 1100px;
-}
-.Wrapper i {
-  top: 50%;
-  height: 400px;
-  width: 150px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  text-align: center;
-  line-height: 46px;
+.Buscar {
+  display: flex;
   color: #ffffff;
-  transform: translateY( -50);
-
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}.Buscar input  {
+  margin-top: 20px;
+  margin-left: 5px;
 }
 
-.Wrapper i:first-child {
-  left: 0px;
-}
-.Wrapper i:last-child {
-  right: 0px;
-}
-.Wrapper .carrossel {
-  white-space: nowrap;
-  font-size: 0px;
-  cursor: pointer;
-  overflow: hidden;
-}
-.carrossel img{
-  height: 340px;
-  width: calc(100% / 5.5);
-  object-fit: cover;
-  margin-left: 30px;
+/*Lista de livros Cadastrados*/
+
+.LivrosCadastrados {
+  display:flex;
+  position: absolute;
+  flex-direction: column;
+  top: 10rem;
+  right: 60.5rem;
+  height: 450px;
+  width: 290px;
+  padding: none;
+  align-content: flex-start;
+  background-color: #AE7C3D;
+}.LivrosCadastrados .CabecarioLivros {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #1c1c1a 5px solid;
+}.LivrosCadastrados .CabecarioLivros h2 {
+  display: flex;
+  color: black;
+  margin-bottom: 5px;
+  align-self: self-end;
 }
 
-.carrossel img:first-child {
-  margin-left: 0px;
-}
-@media Screen and (max-width: 900px) {
-  .carrossel img{
-    width: calc(100% / 3);
 
-  }
+.LivrosCadastrados .ListaLivros {
+  display: flex;
+  overflow-y: scroll;
+  background-color: #AE7C3D;
 }
-@media Screen and (max-width: 550px) {
-  .Carrossel img{
-    width: calc(100%);
-
-  }
+.LivrosCadastrados .ListaLivros tr p {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  color: black;
 }

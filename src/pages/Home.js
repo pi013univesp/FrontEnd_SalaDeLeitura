@@ -1,9 +1,9 @@
 import React from "react";
-import { CarouselLivro } from "../Components/CarouselLivro";
+import CardLivro from "../Components/CardLivro.js";
 
 const Home = () => {
     return (
-        <CarouselLivro/>
+        <CardLivro />
     )
 }
 

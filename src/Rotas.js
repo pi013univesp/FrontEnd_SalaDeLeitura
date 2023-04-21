@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
+import Container from './Components/Container'
 
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
@@ -8,26 +9,16 @@ import EditarLivros from "./pages/EditarLivros";
 import Login from "./pages/Login";
 import QuemSomos from "./pages/QuemSomos";
 
-
 const Rotas = () => {
     return (
-        <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginTop: '28px'
-            }}
-        >
-            <Routes>
-                <Route element={<Home />}           path="/" exact />
-                <Route element={<Cadastro />}       path="/cadastro" />
-                <Route element={<CadastroLivros />} path="/cadastro-livros" />
-                <Route element={<EditarLivros />}   path="/editar-livros" />
-                <Route element={<Login />}          path="/login" />
-                <Route element={<QuemSomos />}      path="/quem-somos" />
-            </Routes>
-        </div>
+        <Routes>
+            <Route element={<Home />}           path="/" exact />
+            <Route element={<Container> <Cadastro /> </Container>}       path="/cadastro" />
+            <Route element={<Container><CadastroLivros /></Container>} path="/cadastro-livros" />
+            <Route element={<Container><EditarLivros /></Container>}   path="/editar-livros" />
+            <Route element={<Container><Login /></Container>}          path="/login" />
+            <Route element={<Container><QuemSomos /></Container>}      path="/quem-somos" />
+        </Routes>
     )
 }
 
