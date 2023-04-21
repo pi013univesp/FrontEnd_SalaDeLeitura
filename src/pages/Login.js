@@ -9,11 +9,11 @@ const LoginForm = () => {
 
     const dados = {
       email: event.target.email.value,
-      senha: event.target.senha.value,
+      password: event.target.senha.value,
     }
 
     try {
-      const login = api.post('/library/login', dados)
+      const login = await api.post('/library/login', dados)
       
       if(login.status === 200){
         alert('Login efetuado')
@@ -30,8 +30,8 @@ const LoginForm = () => {
         <center>
           <h2>Login</h2>
           <form onSubmit={enviarFormulario}>
-            <input type="text" placeholder="Email" required />
-            <input type="password" placeholder="Senha" required />
+            <input type="text" placeholder="Email" id="email" required />
+            <input type="password" placeholder="Senha" id="senha" required />
             <button className="botao1" type="submit" value="Submit">
               Logar
             </button>

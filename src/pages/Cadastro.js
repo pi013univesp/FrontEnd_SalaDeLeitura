@@ -5,19 +5,26 @@ import api from "../service/api";
 const CadastroForm = () => {
 
   async function enviarFormulario(event) {
-    console.log("exemplo")
     event.preventDefault();
     const dados = {
       name: event.target.name.value,
       address: event.target.address.value,
       email: event.target.email.value,
-      senha: event.target.password.value,
+      password: event.target.password.value,
     };
     try {
-      await api.post('/library/register', dados);
+      const {response} = await api.post('/library/register', dados);
 
-      alert('Cadastro concluído!');
+      if(response.status === 201){
+        alert('Cadastro concluído!');
+      }
+      
     } catch (e) {
+      
+      if(e.response.status === 400){
+        alert(`${e.response.data.message}`)
+      }
+
       console.log(e)
     }
   }
