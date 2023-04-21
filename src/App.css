@@ -44,9 +44,6 @@ input {
 }
 
 .formulario {
-  position: absolute;
-  top: 4.6rem;
-  right: 1.5rem;
   background-color: #d2b48d;
   width: 806px;
   height: 500px;
@@ -65,7 +62,6 @@ input {
 }
 
 .logo {
-  color: #ae7c3d;
   font-family: Cinzel;
   font-size: 24px;
   font-weight: 700;
@@ -73,6 +69,11 @@ input {
   letter-spacing: 0em;
   text-align: left;
 
+}
+
+.logoLink {
+  text-decoration: none;
+  color: #ae7c3d;
 }
 
 .menu-button {
