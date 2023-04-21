@@ -1,9 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000/",
+  baseURL: "https://pi013univesp.pythonanywhere.com/",
 });
 
 export default api;
-
-//http://localhost:8000/   https://api.chucknorris.io/
