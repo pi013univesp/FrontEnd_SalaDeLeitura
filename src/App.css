@@ -159,14 +159,11 @@ nav a:hover {
   margin-bottom: 10px;
 }
 .CadastroLivros {
-  position: absolute;
-  padding-left: 30px;
   top: 10rem;
   right: 7rem;
-  background-color: #AE7C3D;
+  background-color: #d2b48d;
   width: 815px;
   height: 450px;
-  position: fixed;
 }
 .resumo {
   display: flex;
@@ -221,18 +218,15 @@ nav a:hover {
 
 /* menu*/
 
-.Menu {
+.Menu ul{
+  margin-top: 15px;
   display: flex;
-  position: absolute;
   background-color: #1c1c1a;
-  top: 5rem;
-  right: 7rem;
-  width: 1150px;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content:space-around;
   align-items: center;
 }
-.Menu table tr td a{
+.Menu  ul li{
   font-family: Lora;
   font-size: 24px;
   margin-right: 10px;
