@@ -1,32 +1,32 @@
+import React from 'react';
 import '../App.css';
+import { Link } from "react-router-dom";
+
 
 const Menu = () => {
 
     return (
-        <div className='Menu' >
-            <table>
-                <tr>
-                    <td>
-                        <a href='#'>Novo</a>
-                    </td>
-                    <td>
-                        <a href='#'>Clientes</a>
-                    </td>
-                    <td>
-                        <a href='#'>Empréstimos</a>
-                    </td>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                </tr>
-            </table>
-            <div className='Buscar'>
+        <nav className='Menu' >
+            <ul>
+                <li>
+                    <Link to='/cadastro-livros'>Cadastro Livros</Link>
+                </li>
+                <li>
+                    <Link to='#'>Pesquisar Livros</Link>
+                </li>
+                <li>
+                    <Link to='#'>Cadastro Clientes</Link>
+                </li>
+                <li>
+                    <Link to='#'>Empréstimos</Link>
+                </li>
+            </ul>
+            {/* <div className='Buscar'>
             <h3>Buscar: </h3>
             <input></input>
 
-            </div>
-        </div>
+            </div> */}
+        </nav>
     );
 }
 

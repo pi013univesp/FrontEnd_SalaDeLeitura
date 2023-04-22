@@ -28,6 +28,7 @@ const CadastroLivros = () => {
             <div className="centralizar">
                 <center>
                     <h2>Cadastro Livros</h2>
+                    <br/>
                     <form onSubmit={enviarFormulario} >
                         <input type="text" placeholder="Título" id="titulolivro" required />
                         <input type="text" placeholder="Tema/Genero" id="Tema" required />
