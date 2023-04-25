@@ -157,13 +157,16 @@ nav a:hover {
   font-family: Lora;
   color:black;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 .CadastroLivros {
   top: 10rem;
   right: 7rem;
-  background-color: #d2b48d;
+  background-color: #AE7C3D;
   width: 815px;
   height: 450px;
+  padding-left: 10px;
+  padding-top: 0px;
 }
 .resumo {
   display: flex;
@@ -221,10 +224,11 @@ nav a:hover {
 .Menu ul{
   margin-top: 15px;
   display: flex;
-  background-color: #1c1c1a;
+
   flex-direction: row;
-  justify-content:space-around;
   align-items: center;
+  width: 1150px;
+  justify-content:space-between;
 }
 .Menu  ul li{
   font-family: Lora;
@@ -232,7 +236,6 @@ nav a:hover {
   margin-right: 10px;
   color:#ffffff;
   font-weight: bold;
-
 }
 .Buscar {
   display: flex;
@@ -250,15 +253,15 @@ nav a:hover {
 
 .LivrosCadastrados {
   display:flex;
-  position: absolute;
   flex-direction: column;
   top: 10rem;
   right: 60.5rem;
   height: 450px;
-  width: 290px;
+  width: 300px;
   padding: none;
   align-content: flex-start;
   background-color: #AE7C3D;
+  margin-right: 23px;
 }.LivrosCadastrados .CabecarioLivros {
   display: flex;
   height: 40px;
@@ -273,7 +276,6 @@ nav a:hover {
   align-self: self-end;
 }
 
-
 .LivrosCadastrados .ListaLivros {
   display: flex;
   overflow-y: scroll;
@@ -284,4 +286,39 @@ nav a:hover {
   flex-direction: row;
   padding: 5px;
   color: black;
+}
+
+/*Lista de empréstimos*/
+
+.DadosEmprestimos {
+  top: 10rem;
+  right: 7rem;
+  background-color: #AE7C3D;
+  width: 815px;
+  height: 450px;
+  padding-left: 10px;
+  padding-top: 0px;
+  overflow-y: scroll;
+  border-bottom: #AE7C3D solid 5px ;
+}
+.CabecarioEmprestimos h2{
+  color: black;
+  padding-top: 10px;
+  width: 798px;
+  height: 30px;
+  position: fixed;
+  background-color: #AE7C3D;
+  margin-top: 0px;
+}
+
+.DadosEmprestimos div {
+  width: 100%;
+  padding: 0px;
+
+}
+.ListaEmprestimos tr td{
+  width: 140px;
+  border: black solid 1px;
+  background-color: #ffffff;
+  
 }

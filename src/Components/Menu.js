@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Menu = () => {
 
     return (
+        <center>
         <nav className='Menu' >
             <ul>
                 <li>
@@ -18,7 +19,7 @@ const Menu = () => {
                     <Link to='#'>Cadastro Clientes</Link>
                 </li>
                 <li>
-                    <Link to='#'>Empréstimos</Link>
+                    <Link to='/emprestimos'>Empréstimos</Link>
                 </li>
             </ul>
             {/* <div className='Buscar'>
@@ -27,6 +28,7 @@ const Menu = () => {
 
             </div> */}
         </nav>
+        </center>
     );
 }
 

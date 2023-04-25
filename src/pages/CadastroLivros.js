@@ -1,49 +1,18 @@
 import React from "react";
 import "../App.css";
+import CadastrodeLivros from "../Components/CadastrodeLivros";
+import LivrosCadastrados from "../Components/LivrosCadastrados";
 import api from "../service/api";
 
 const CadastroLivros = () => {
 
-    async function enviarFormulario(event) {
-        console.log("exemplo")
-        event.preventDefault();
-        const dados = {
-            titulo: event.target.titulo.value,
-            tema: event.target.tema.value,
-            editora: event.target.editora.value,
-            autor: event.target.autor.value,
-            estoque: event.target.estoque.value,
-            resumo: event.target.resumo.value,
-        };
-        try {
-            await api.post('/library/#', dados);
-
-            alert('Livro Cadastrado!');
-        } catch (e) {
-            console.log(e)
-        }
-    }
     return (
-        <div className="CadastroLivros">
-            <div className="centralizar">
-                <center>
-                    <h2>Cadastro Livros</h2>
-                    <br/>
-                    <form onSubmit={enviarFormulario} >
-                        <input type="text" placeholder="Título" id="titulolivro" required />
-                        <input type="text" placeholder="Tema/Genero" id="Tema" required />
-                        <input type="text" placeholder="Editora" id="editora" required />
-                        <input type="text" placeholder="Autor" id="autor" required />
-                        <input type="number" placeholder="estoque" id="estoque" required />
-                        <input type="text" placeholder="Resumo" id="resumo" required />
+        <>
 
-                        <button className="botao1" type="submit">
-                            Cadastrar
-                        </button>
-                    </form>
-                </center>
-            </div>
-        </div>
+            <LivrosCadastrados />
+            <CadastrodeLivros />
+
+        </>
     );
 }
 
