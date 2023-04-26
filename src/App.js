@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Header from "./Components/Header";
 import Rotas from "./Rotas.js";
-import Footer from "./Components/Footer"
+import Footer from "./Components/Footer";
+import LivrosInfo from "./Components/LivrosInfo";
 
 import './App.css';
 
