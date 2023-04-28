@@ -160,8 +160,6 @@ const ListaEmprestimos = () => {
                         <td>teste</td>
                     </tr>
 
-
-
                 </table>
             </div>
         </div>
