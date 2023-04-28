@@ -8,13 +8,16 @@ const EditordeLivros = () => {
         console.log("exemplo")
         event.preventDefault();
         const dados = {
-            titulo: event.target.titulo.value,
+
             tema: event.target.tema.value,
-            editora: event.target.editora.value,
+            data: event.target.data.value,
+            tombo: event.target.tombo.value,
+            procedencia: event.target.procedencia.value,
+            titulo: event.target.titulo.value,
             autor: event.target.autor.value,
+            editora: event.target.editora.value,
             estoque: event.target.estoque.value,
             resumo: event.target.resumo.value,
-            foto: event.target.foto.value,
         };
         try {
             await api.post('/library/#', dados);
@@ -27,50 +30,40 @@ const EditordeLivros = () => {
     return (
         <div className="CadastroLivros">
 
-            <h2 className="NovoRegistro">Editar</h2>
+            <h2 className="NovoRegistro">Novo Registro</h2>
             <form onSubmit={enviarFormulario} >
                 <table className="CadLivros">
                     <tr>
                         <td className="CadLivrosLateralesq">
-                            <input type="text" placeholder="Título" id="titulolivro" required />
-                            <input type="text" placeholder="Tema/Genero" id="Tema" required />
-                            <input type="text" placeholder="Autor" id="autor" required />
-                            <input type="text" placeholder="Editora" id="editora" required />
+                            <input type="text" placeholder="Tema/Genero-Exemplo para edição" id="Tema" required />
+                            <input type="text" placeholder="Data-Exemplo para edição" id="data" required />
+                            <input type="number" placeholder="Tombo-Exemplo para edição" id="tombo" required />
+                            <input type="text" placeholder="Procedência-Exemplo para edição" id="procedencia" required />
+                            <input type="text" placeholder="Título/Especie-Exemplo para edição" id="titulolivro" required />
+                            <input type="text" placeholder="Autor-Exemplo para edição" id="autor" required />
+                            <input type="text" placeholder="Editora-Exemplo para edição" id="editora" required />
                         </td>
 
                         <td className="CadLivrosLateraldir">
                             <tr>
-                                <h3>Estoque: </h3>
-                                <input label="Estoque" type="number" placeholder="estoque" id="estoque" required />
+
+                                <h3>Estoque:</h3>
+                                <input label="Estoque" type="number" placeholder="estoque-Exemplo para edição" id="estoque" required />
+
+                                <div className="resumo" >
+                                    <textarea type="text" placeholder="Resumo-Exemplo para edição" id="resumo" required />
+                                </div>
+                                <br/>
                             </tr>
-                            <tr>
-                                <h3>Capa: </h3>
-                                <input type="text" placeholder="adicionar foto" id="foto" required />
-                            </tr>
-                            <br />
-                            <br/>
-                            <br/>
-                            <br/>
-                          
                         </td>
                     </tr>
                 </table>
-                <div className="resumo" >
-                    <textarea type="text" placeholder="Resumo" id="resumo" required />
-                </div>
-
                 <center>
-                    <div className="BotaoEditar">
-                        <button className="botao1" type="submit">
-                            Salvar
-                        </button>
-                        <button className="botao1" type="submit">
-                            Excluir
-                        </button>
-                    </div>
+                    <button className="botao2" type="submit">
+                        Cadastrar
+                    </button>
                 </center>
             </form>
-
 
         </div>
     );

@@ -8,9 +8,9 @@ const Emprestimos = () => {
 
     return (
         <>
-        <LivrosCadastrados />
-        <ListaEmprestimos />
-        
+            <LivrosCadastrados />
+            <ListaEmprestimos />
+
         </>
     );
 }
