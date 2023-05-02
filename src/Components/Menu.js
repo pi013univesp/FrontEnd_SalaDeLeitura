@@ -13,7 +13,7 @@ const Menu = () => {
                     <Link to='/cadastro-livros'>Cadastro Livros</Link>
                 </li>
                 <li>
-                    <Link to='#'>Pesquisar Livros</Link>
+                    <Link to='/pesquisar-livros'>Pesquisar Livros</Link>
                 </li>
                 <li>
                     <Link to='#'>Cadastro Clientes</Link>

@@ -1,17 +1,18 @@
 import React from "react";
 import "../App.css";
-import CadastrodeLivros from "../Components/CadastrodeLivros";
+import PesquisarLivrosComp from "../Components/PesquisarLirvrosComp";
 import LivrosCadastrados from "../Components/LivrosCadastrados";
 import api from "../service/api";
 
-const CadastroLivros = () => {
+
+const PesquisarLivros = () => {
 
     return (
         <>
             <LivrosCadastrados />
-            <CadastrodeLivros />
+            <PesquisarLivrosComp />
         </>
     );
 }
 
-export default CadastroLivros;
+export default PesquisarLivros;

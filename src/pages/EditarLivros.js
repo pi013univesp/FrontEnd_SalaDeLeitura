@@ -1,13 +1,14 @@
 import React from "react";
 import api from "../service/api";
 import EditordeLivros from "../Components/EditordeLivros";
+import LivrosCadastrados from "../Components/LivrosCadastrados";
 
 const EditarLivros = () => {
 
     return (
         <>
-        <EditordeLivros />
-        
+            <LivrosCadastrados />
+            <EditordeLivros />
         </>
     );
 }
