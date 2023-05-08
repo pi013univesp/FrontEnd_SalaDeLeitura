@@ -1,28 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 import api from "../service/api";
 
 const CadastrodeLivros = () => {
 
     async function enviarFormulario(event) {
-        console.log("exemplo")
         event.preventDefault();
-        const dados = {
-
-            tema: event.target.tema.value,
+        const dadosLivro = {
+            title: event.target.titulolivro.value,
+            author: event.target.autor.value,
+            publisher: event.target.editora.value,
+            especie: event.target.tema.value,
             data: event.target.data.value,
             tombo: event.target.tombo.value,
             procedencia: event.target.procedencia.value,
-            titulo: event.target.titulo.value,
-            autor: event.target.autor.value,
-            editora: event.target.editora.value,
-            estoque: event.target.estoque.value,
-            resumo: event.target.resumo.value,
         };
         try {
-            await api.post('/library/#', dados);
-
-            alert('Livro Cadastrado!');
+            const envio1 = await api.post('/book/register/', dadosLivro);
+            if(envio1.status === 201){
+                const { data } = envio1
+                const storage = JSON.parse(localStorage.getItem('biblioteca'))
+                const dadosLivroNaBiblioteca = {
+                    library_fk: storage.id,
+                    book_fk: data.data.id,
+                    book_stock: event.target.estoque.value,
+                }
+                const envio2 = await api.post('/book-at-library/register/', dadosLivroNaBiblioteca);
+                if(envio2.status === 201){
+                    alert('Livro Cadastrado!');
+                }
+            }
         } catch (e) {
             console.log(e)
         }
@@ -35,26 +42,16 @@ const CadastrodeLivros = () => {
                 <table className="CadLivros">
                     <tr>
                         <td className="CadLivrosLateralesq">
-                            <input type="text" placeholder="Tema/Genero" id="Tema" required />
-                            <input type="text" placeholder="Data" id="data" required />
-                            <input type="number" placeholder="Tombo" id="tombo" required />
+                            <input type="text" placeholder="Tema/Genero" id="tema" required />
+                            <input type="date" placeholder="Data" id="data" required />
+                            <input type="date" placeholder="Tombo" id="tombo" required />
                             <input type="text" placeholder="Procedência" id="procedencia" required />
+                        </td>
+                        <td className="CadLivrosLateraldir">
                             <input type="text" placeholder="Título/Especie" id="titulolivro" required />
                             <input type="text" placeholder="Autor" id="autor" required />
                             <input type="text" placeholder="Editora" id="editora" required />
-                        </td>
-
-                        <td className="CadLivrosLateraldir">
-                            <tr>
-
-                                <h3>Estoque:</h3>
-                                <input label="Estoque" type="number" placeholder="estoque" id="estoque" required />
-
-                                <div className="resumo" >
-                                    <textarea type="text" placeholder="Resumo" id="resumo" required />
-                                </div>
-                                <br/>
-                            </tr>
+                            <input label="Estoque" type="number" placeholder="estoque" id="estoque" required />
                         </td>
                     </tr>
                 </table>

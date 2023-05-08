@@ -319,8 +319,8 @@ nav a:hover {
 
 }
 .ListaEmprestimos tr td{
-  width: 140px;
+  width: 160px;
   border: black solid 1px;
   background-color: #ffffff;
-  
+  text-align: center;
 }
