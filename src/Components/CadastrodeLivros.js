@@ -42,16 +42,63 @@ const CadastrodeLivros = () => {
                 <table className="CadLivros">
                     <tr>
                         <td className="CadLivrosLateralesq">
-                            <input type="text" placeholder="Tema/Genero" id="tema" required />
-                            <input type="date" placeholder="Data" id="data" required />
-                            <input type="date" placeholder="Tombo" id="tombo" required />
-                            <input type="text" placeholder="Procedência" id="procedencia" required />
+                            <span>Tema</span>
+                            <input 
+                                type="text" 
+                                placeholder="Tema/Genero" 
+                                id="tema" 
+                                required 
+                            />
+                            <span>Data</span>
+                            <input 
+                                type="date" 
+                                placeholder="Data" 
+                                id="data" 
+                                required 
+                            />
+                            <span>Tombo</span>
+                            <input 
+                                type="date" 
+                                placeholder="Tombo" 
+                                id="tombo" 
+                                required 
+                            />
+                            <span>Procedência</span>
+                            <input
+                                type="text" 
+                                placeholder="Procedência" 
+                                id="procedencia" 
+                                required 
+                            />
                         </td>
                         <td className="CadLivrosLateraldir">
-                            <input type="text" placeholder="Título/Especie" id="titulolivro" required />
-                            <input type="text" placeholder="Autor" id="autor" required />
-                            <input type="text" placeholder="Editora" id="editora" required />
-                            <input label="Estoque" type="number" placeholder="estoque" id="estoque" required />
+                            <span>Título</span>
+                            <input 
+                                type="text" 
+                                placeholder="Título/Especie" 
+                                id="titulolivro" 
+                                required 
+                            />
+                            <span>Autor</span>
+                            <input type="text" 
+                                placeholder="Autor" 
+                                id="autor" 
+                                required 
+                            />
+                            <span>Editora</span>
+                            <input type="text" 
+                                placeholder="Editora" 
+                                id="editora" 
+                                required 
+                            />
+                            <span>Estoque</span>
+                            <input 
+                                label="Estoque" 
+                                type="number" 
+                                placeholder="estoque" 
+                                id="estoque" 
+                                required 
+                            />
                         </td>
                     </tr>
                 </table>
