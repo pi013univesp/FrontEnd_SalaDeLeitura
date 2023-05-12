@@ -6,9 +6,11 @@ import api from "../service/api";
 const PesquisarLivrosComp = () => {
 
     const [livros, setLivros] = useState([])
+    const biblioteca = JSON.parse(localStorage.getItem('biblioteca')).id
+
 
     async function buscaLivros(){
-        const url = await api.get('/book/')
+        const url = await api.get('/book-at-library/')
         setLivros(url.data.data)
     }
 
@@ -50,14 +52,14 @@ const PesquisarLivrosComp = () => {
                     {
                         livros.length > 0 && livros.map((item) => {
                             return (
-                                <tr key={item.id}>
-                                    <td>{item.title}</td>
-                                    <td>{item.author}</td>
-                                    <td>{item.publisher}</td>
-                                    <td>{item.especie}</td>
-                                    <td>{dataFormatada(item.data)}</td>
-                                    <td>{dataFormatada(item.tombo)}</td>
-                                    <td>{item.procedencia}</td>
+                                item.library_fk === biblioteca && <tr key={item.id}>
+                                    <td>{item.book_title}</td>
+                                    <td>{item.book_author}</td>
+                                    <td>{item.book_publisher}</td>
+                                    <td>{item.book_especie}</td>
+                                    <td>{dataFormatada(item.book_data)}</td>
+                                    <td>{dataFormatada(item.book_tombo)}</td>
+                                    <td>{item.book_procedencia}</td>
                                 </tr>
                             )
                         })

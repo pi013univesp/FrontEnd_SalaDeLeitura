@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import QuemSomos from "./pages/QuemSomos";
 import Emprestimos from "./pages/Emprestimos";
 import PesquisarLivros from "./pages/PesquisarLivros";
+import CadastroCliente from "./pages/cadastroCliente/CadastroCliente";
 
 const Rotas = () => {
     return (
@@ -22,6 +23,7 @@ const Rotas = () => {
             <Route element={<Container><QuemSomos /></Container>}      path="/quem-somos" />
             <Route element={<Container><Emprestimos /></Container>}      path="/emprestimos" />
             <Route element={<Container><PesquisarLivros /></Container>}      path="/pesquisar-livros" />
+            <Route element={<Container><CadastroCliente /></Container>}      path="/cadastro-cliente" />
         </Routes>
     )
 }

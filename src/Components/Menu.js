@@ -16,7 +16,7 @@ const Menu = () => {
                     <Link to='/pesquisar-livros'>Pesquisar Livros</Link>
                 </li>
                 <li>
-                    <Link to='#'>Cadastro Clientes</Link>
+                    <Link to='/cadastro-cliente'>Cadastro Clientes</Link>
                 </li>
                 <li>
                     <Link to='/emprestimos'>Empréstimos</Link>

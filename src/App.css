@@ -303,15 +303,25 @@ nav a:hover {
   overflow-y: scroll;
   border-bottom: #AE7C3D solid 5px ;
 }
-.CabecarioEmprestimos h2{
-  color: black;
-  padding-top: 10px;
-  width: 798px;
-  height: 30px;
-  position: fixed;
-  background-color: #AE7C3D;
-  margin-top: 0px;
+
+.CabecarioEmprestimos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.CabecarioEmprestimos p {
+  color: black;
+  font-weight: 600;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.CabecarioEmprestimos p:hover {
+  text-decoration: underline;
+}
+
+
 
 .DadosEmprestimos div {
   width: 100%;

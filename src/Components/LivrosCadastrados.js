@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 const LivrosCadastrados = () => {
 
     const [livros, setLivros] = useState([])
+    const biblioteca = JSON.parse(localStorage.getItem('biblioteca')).id
+
 
     async function buscaLivros(){
         const url = await api.get('/book-at-library/')
@@ -28,7 +30,7 @@ const LivrosCadastrados = () => {
                         {
                             livros.length > 0 && livros.map((item) => {
                                 return (
-                                    <Link to={{pathname:`/editar-livros/${item.id}`}} key={item.id}>
+                                    item.library_fk === biblioteca && <Link to={{pathname:`/editar-livros/${item.id}`}} key={item.id}>
                                         <p>{item.book_title}</p>
                                     </Link>
                                 )
