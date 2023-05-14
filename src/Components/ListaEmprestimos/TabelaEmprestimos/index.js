@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from "react";
 import api from "../../../service/api";
 import "../../../App.css";
@@ -5,6 +6,7 @@ import "../../../App.css";
 export const TabelaEmprestimos = () => {
 
     const [alugueis, setAlugueis] = useState([])
+    const [reload, setReload] = useState(false)
 
     async function buscaAluguel(){
         const url = await api.get('/borrow/')
@@ -13,7 +15,17 @@ export const TabelaEmprestimos = () => {
 
     useEffect(() => {
         buscaAluguel()
-    }, [])
+    }, [reload])
+
+    const finalizaEmprestimo = (id) => {
+        const c = confirm("Tem certeza de que quer finalizar esse emprestimo?")
+        if(c){
+            api.get(`/borrow/close/${id}`)
+            setReload(!reload)
+        }else{
+            alert("operação cancelada")
+        }
+    }
 
 
     const dataFormatada = (datas) => {
@@ -37,6 +49,7 @@ export const TabelaEmprestimos = () => {
                     <td><h3>Devolvido</h3></td>
                     <td><h3>Titulo</h3></td>
                     <td><h3>Cliente</h3></td>
+                    <td><h3>Finalizar emprestimo</h3></td>
                 </tr>
                 {
                     alugueis.length > 0 && alugueis.map((item) => {
@@ -47,6 +60,10 @@ export const TabelaEmprestimos = () => {
                                 <td>{item.return_date ? dataFormatada(item.return_date) : "Ainda não devolvido"}</td>
                                 <td>{item.book_title}</td>
                                 <td>{item.client_name}</td>
+                                <td>{
+                                    !item.return_date &&  (<button  onClick={() => finalizaEmprestimo(item.id)}>Finalizar</button>)
+                                }</td>
+                                
                             </tr>
                         )
                     })

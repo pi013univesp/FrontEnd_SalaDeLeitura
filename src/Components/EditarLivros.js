@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 import api from "../service/api";
 
 const EditarLivros = () => {
 
     async function enviarFormulario(event) {
-        console.log("exemplo")
         event.preventDefault();
         const dados = {
             titulo: event.target.titulo.value,

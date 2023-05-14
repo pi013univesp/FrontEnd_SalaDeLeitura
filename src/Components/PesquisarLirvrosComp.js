@@ -48,6 +48,9 @@ const PesquisarLivrosComp = () => {
                         <td><h3>Data</h3></td>
                         <td><h3>Tombo</h3></td>
                         <td><h3>Procedencia</h3></td>
+                        <td><h3>Estoque</h3></td>
+                        <td><h3>Emprestados</h3></td>
+                        <td><h3>Estoque disponivel</h3></td>
                     </tr>
                     {
                         livros.length > 0 && livros.map((item) => {
@@ -60,6 +63,9 @@ const PesquisarLivrosComp = () => {
                                     <td>{dataFormatada(item.book_data)}</td>
                                     <td>{dataFormatada(item.book_tombo)}</td>
                                     <td>{item.book_procedencia}</td>
+                                    <td>{item.book_stock}</td>
+                                    <td>{item.number_of_borrowed_books}</td>
+                                    <td>{ parseInt(item.book_stock) - parseInt(item.number_of_borrowed_books)}</td>
                                 </tr>
                             )
                         })

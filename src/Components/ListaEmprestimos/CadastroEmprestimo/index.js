@@ -20,7 +20,6 @@ export const CadastroEmprestimo = ({
 
         try {
             const envio1 = await api.post('/borrow/register/', dadosEmprestimo);
-            console.log(envio1.data.message)
             if(envio1.data.message === 'Esse cliente tem pendencia de livro'){
                 alert(envio1.data.message);
             }
