@@ -52,7 +52,7 @@ export const CadastroEmprestimo = ({
                         {
                             clientes.length > 0 && clientes.map((item) => {
                                 return(
-                                    <option value={item.id} key={item.id}>{item.name}</option>
+                                    item.library_fk === biblioteca &&  <option value={item.id} key={item.id}>{item.name}</option>
                                 )
                             })
                         }
