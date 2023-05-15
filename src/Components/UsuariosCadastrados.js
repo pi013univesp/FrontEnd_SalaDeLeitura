@@ -3,7 +3,9 @@ import api from "../service/api";
 import '../App.css';
 import { Link } from "react-router-dom";
 
-export const UsuariosCadastrados = () => {
+export const UsuariosCadastrados = ({
+    update
+}) => {
 
     const [usuarios, setUsuarios] = useState([])
     const biblioteca = JSON.parse(localStorage.getItem('biblioteca')).id
@@ -16,7 +18,7 @@ export const UsuariosCadastrados = () => {
 
     useEffect(() => {
         buscaUsuarios()
-    }, [])
+    }, [update])
 
 
     return (

@@ -7,6 +7,7 @@ import { UsuariosCadastrados } from "../../Components/UsuariosCadastrados";
 export const EditarCliente = () => {
 
     const [cliente, setcliente] = useState({})
+    const [update, setUpdate] = useState(false)
 
     const { id } = useParams();
 
@@ -53,6 +54,7 @@ export const EditarCliente = () => {
             const envio1 = await api.put(`/client/update/${id}`, dadosCliente);
             if(envio1.status === 200){
                 alert('Cliente editado!');
+                setUpdate(!update)
             }
         } catch (e) {
             console.log(e)
@@ -61,7 +63,7 @@ export const EditarCliente = () => {
 
     return (
         <>
-        <UsuariosCadastrados/>
+        <UsuariosCadastrados update={update}/>
         <div className="CadastroLivros">
             <h2 className="NovoRegistro">Editar Cliente</h2>
             <br/>

@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../App.css";
 import api from "../../service/api";
 import { UsuariosCadastrados } from "../../Components/UsuariosCadastrados";
 
 const CadastroCliente = () => {
 
+    const [update, setUpdate] = useState(false)
     async function enviarFormulario(event) {
         event.preventDefault();
         const dadosCliente = {
@@ -17,6 +18,7 @@ const CadastroCliente = () => {
             const envio1 = await api.post('/client/register/', dadosCliente);
             if(envio1.status === 201){
                 alert('Cliente Cadastrado!');
+                setUpdate(!update)
             }
         } catch (e) {
             console.log(e)
@@ -25,7 +27,7 @@ const CadastroCliente = () => {
 
     return (
         <>
-        <UsuariosCadastrados/>
+        <UsuariosCadastrados update={update}/>
         <div className="CadastroLivros">
             <h2 className="NovoRegistro">Novo Cliente</h2>
             <br/>
