@@ -7,7 +7,7 @@ const QuemSomos = () => {
         <div className="formulario">
             <div className="centralizar">
                 <center>
-                    <h2>Quem Somos</h2>
+                    <h2 className="card">Quem Somos</h2>
                     <p>
                         Estudantes de graduação do curso do Eixo computação da Univesp. <br />
                         Esse site é resultado da diciplina do Projeto Integrador I - 2023 <br />

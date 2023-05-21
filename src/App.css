@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora&display=swap');
+
 * {
   padding: none;
   margin: none;
@@ -7,6 +9,7 @@
 body {
   width: "100%";
   background-color: #1c1c1a;
+  font-family: 'Lora';
 }
 
 /* Componente Cadastro e Login e Quem somos*/
@@ -18,6 +21,7 @@ input {
   width: 300px;
   padding-left: 5px;
   margin-bottom: 20px;
+  font-family: 'Lora';
 }
 
 .botao1 {
@@ -31,6 +35,7 @@ input {
   border: none;
   background-color: #1c1c1a;
   cursor: pointer;
+  font-family: 'Lora';
 }
 .botao1:hover {
   background-color: black;
@@ -41,12 +46,18 @@ input {
   height: 500px;
   align-items: center;
   justify-content: center;
+  font-family: 'Lora';
+}
+.centralizar p {
+  font-family: 'Lora';
+  color: #1c1c1a;
 }
 
 .formulario {
   background-color: #d2b48d;
   width: 806px;
   height: 500px;
+  font-family: 'Lora';
 }
 .LogoUnivesp {
   margin-top: 20px;
@@ -61,12 +72,12 @@ input {
   padding-inline: 100px;
   height: 70px;
   border-bottom: 4px solid #ae7c3d;
-  font-family: Cinzel;
+  font-family: 'Cinzel';
   font-size: 24px;
 }
 
 .logo {
-  font-family: Cinzel;
+  font-family: 'Cinzel';
   font-size: 24px;
   font-weight: 700;
   line-height: 54px;
@@ -157,8 +168,7 @@ nav a:hover {
 
 /* cadastro/edição +... dos livros*/
 .NovoRegistro {
-  display: flex;
-  font-family: Lora;
+  font-family: 'Lora';
   color:black;
   margin-top: 10px;
 }
@@ -166,17 +176,18 @@ nav a:hover {
   top: 10rem;
   right: 7rem;
   background-color: #AE7C3D;
-
+  width: 815px;
   height: 450px;
   padding-left: 10px;
   padding-top: 0px;
 }
-.resumo {
-  border: none;
-}.resumo textarea {
-  padding: 5px;
-  height: 250px;
-  width: 400px;
+.PesquisarLivros {
+  top: 10rem;
+  right: 7rem;
+  background-color: #AE7C3D;
+  height: 450px;
+  padding-left: 10px;
+  padding-top: 0px;
 }
 
 .CadLivrosLateralesq {
@@ -196,6 +207,7 @@ nav a:hover {
     justify-content:flex-start;
     font-size: 12px;
     font-weight:none;
+    font-family: 'Lora';
   }
 
 .botao2 {
@@ -209,6 +221,7 @@ nav a:hover {
   border: none;
   background-color: #1c1c1a;
   margin-bottom: 10px;
+  font-family: 'Lora';
 }
 .botao2:hover {
   background-color: black;
@@ -217,6 +230,7 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   justify-content:center;
+  font-family: 'Lora';
 }.BotaoEditar button {
   margin-left: 20px;
 }
@@ -226,18 +240,16 @@ nav a:hover {
 .Menu ul{
   margin-top: 15px;
   display: flex;
-
   flex-direction: row;
   align-items: center;
   width: 1150px;
   justify-content:space-between;
 }
 .Menu  ul li{
-  font-family: Lora;
+  font-family: 'Lora';
   font-size: 24px;
   margin-right: 10px;
   color:#ffffff;
-  font-weight: bold;
 }
 .Buscar {
   display: flex;
@@ -264,6 +276,7 @@ nav a:hover {
   align-content: flex-start;
   background-color: #AE7C3D;
   margin-right: 23px;
+  font-family: 'Lora';
 }.LivrosCadastrados .CabecarioLivros {
   display: flex;
   height: 40px;
@@ -271,11 +284,13 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   border-bottom: #1c1c1a 5px solid;
+  font-family: 'Lora';
 }.LivrosCadastrados .CabecarioLivros h2 {
   display: flex;
   color: black;
   margin-bottom: 5px;
   align-self: self-end;
+  font-family: 'Lora';
 }
 
 .LivrosCadastrados .ListaLivros {
@@ -288,6 +303,7 @@ nav a:hover {
   flex-direction: row;
   padding: 5px;
   color: black;
+  font-family: 'Lora';
 }
 
 /*Lista de empréstimos*/
@@ -302,12 +318,14 @@ nav a:hover {
   padding-top: 0px;
   overflow-y: scroll;
   border-bottom: #AE7C3D solid 5px ;
+  font-family: 'Lora';
 }
 
 .CabecarioEmprestimos {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-family: 'Lora';
 }
 
 .CabecarioEmprestimos p {
@@ -315,22 +333,22 @@ nav a:hover {
   font-weight: 600;
   font-size: 19px;
   cursor: pointer;
+  font-family: 'Lora';
 }
 
 .CabecarioEmprestimos p:hover {
   text-decoration: underline;
 }
 
-
-
 .DadosEmprestimos div {
   width: 100%;
   padding: 0px;
-
+  font-family: 'Lora';
 }
 .ListaEmprestimos tr td{
   width: 160px;
   border: black solid 1px;
   background-color: #ffffff;
   text-align: center;
+  font-family: 'Lora';
 }

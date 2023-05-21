@@ -17,7 +17,7 @@ const CadastrodeLivros = () => {
         };
         try {
             const envio1 = await api.post('/book/register/', dadosLivro);
-            if(envio1.status === 201){
+            if (envio1.status === 201) {
                 const { data } = envio1
                 const storage = JSON.parse(localStorage.getItem('biblioteca'))
                 const dadosLivroNaBiblioteca = {
@@ -26,7 +26,7 @@ const CadastrodeLivros = () => {
                     book_stock: event.target.estoque.value,
                 }
                 const envio2 = await api.post('/book-at-library/register/', dadosLivroNaBiblioteca);
-                if(envio2.status === 201){
+                if (envio2.status === 201) {
                     alert('Livro Cadastrado!');
                 }
             }
@@ -36,79 +36,81 @@ const CadastrodeLivros = () => {
     }
     return (
         <div className="CadastroLivros">
+            <center>
 
-            <h2 className="NovoRegistro">Novo Registro</h2>
-            <form onSubmit={enviarFormulario} >
-                <table className="CadLivros">
-                    <tr>
-                        <td className="CadLivrosLateralesq">
-                            <span>Tema</span>
-                            <input 
-                                type="text" 
-                                placeholder="Tema/Genero" 
-                                id="tema" 
-                                required 
-                            />
-                            <span>Data</span>
-                            <input 
-                                type="date" 
-                                placeholder="Data" 
-                                id="data" 
-                                required 
-                            />
-                            <span>Tombo</span>
-                            <input 
-                                type="date" 
-                                placeholder="Tombo" 
-                                id="tombo" 
-                                required 
-                            />
-                            <span>Procedência</span>
-                            <input
-                                type="text" 
-                                placeholder="Procedência" 
-                                id="procedencia" 
-                                required 
-                            />
-                        </td>
-                        <td className="CadLivrosLateraldir">
-                            <span>Título</span>
-                            <input 
-                                type="text" 
-                                placeholder="Título/Especie" 
-                                id="titulolivro" 
-                                required 
-                            />
-                            <span>Autor</span>
-                            <input type="text" 
-                                placeholder="Autor" 
-                                id="autor" 
-                                required 
-                            />
-                            <span>Editora</span>
-                            <input type="text" 
-                                placeholder="Editora" 
-                                id="editora" 
-                                required 
-                            />
-                            <span>Estoque</span>
-                            <input 
-                                label="Estoque" 
-                                type="number" 
-                                placeholder="estoque" 
-                                id="estoque" 
-                                required 
-                            />
-                        </td>
-                    </tr>
-                </table>
-                <center>
+                <h2 className="NovoRegistro">Novo Registro</h2>
+                <br />
+                <form onSubmit={enviarFormulario} >
+                    <table className="CadLivros">
+                        <tr>
+                            <td className="CadLivrosLateralesq">
+                                <span>Tema:</span>
+                                <input
+                                    type="text"
+                                    placeholder="Tema/Genero"
+                                    id="tema"
+                                    required
+                                />
+                                <span>Data:</span>
+                                <input
+                                    type="date"
+                                    placeholder="Data"
+                                    id="data"
+                                    required
+                                />
+                                <span>Tombo:</span>
+                                <input
+                                    type="date"
+                                    placeholder="Tombo"
+                                    id="tombo"
+                                    required
+                                />
+                                <span>Procedência:</span>
+                                <input
+                                    type="text"
+                                    placeholder="Procedência"
+                                    id="procedencia"
+                                    required
+                                />
+                            </td>
+                            <td className="CadLivrosLateraldir">
+                                <span>Título:</span>
+                                <input
+                                    type="text"
+                                    placeholder="Título/Especie"
+                                    id="titulolivro"
+                                    required
+                                />
+                                <span>Autor:</span>
+                                <input type="text"
+                                    placeholder="Autor"
+                                    id="autor"
+                                    required
+                                />
+                                <span>Editora:</span>
+                                <input type="text"
+                                    placeholder="Editora"
+                                    id="editora"
+                                    required
+                                />
+                                <span>Estoque:</span>
+                                <input
+                                    label="Estoque"
+                                    type="number"
+                                    placeholder="estoque"
+                                    id="estoque"
+                                    required
+                                />
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
                     <button className="botao2" type="submit">
                         Cadastrar
                     </button>
-                </center>
-            </form>
 
+                </form>
+            </center>
         </div>
     );
 }
