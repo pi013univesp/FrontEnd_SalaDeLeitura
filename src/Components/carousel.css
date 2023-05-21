@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora&display=swap');
 * {
     background-color: none;
     color: none;
@@ -37,10 +38,16 @@ h2 {
     margin-top: 30px;
     font-family: Cinzel;
 }
+.Cards {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: -60px;;
+  font-family: Cinzel;
+}
 p {
     color: #606060;
     margin-top: 30px;
-    font-family: Cinzel;
+    font-family: 'Cinzel';
 }
 
 .rec.rec-carousel-wrapper  {

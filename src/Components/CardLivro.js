@@ -63,7 +63,7 @@ export default function CardLivro() {
   return (
     <div className="Card_livro">
       <center>
-        <h2>Livros mais lidos da semana</h2>
+        <h2 className="Cards">Livros mais lidos da semana</h2>
         <div>
           <Carousel breakPoints= {breakPoints} >
             {

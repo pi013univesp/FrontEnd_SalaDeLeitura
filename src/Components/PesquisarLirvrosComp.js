@@ -32,7 +32,7 @@ const PesquisarLivrosComp = () => {
 
 
     return (
-       <div className="CadastroLivros">
+       <div className="PesquisarLivros">
         <h2 className="NovoRegistro">Pesquisar Livro:</h2>
         <br/>
 

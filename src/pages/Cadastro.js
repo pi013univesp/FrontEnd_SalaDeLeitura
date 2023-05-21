@@ -38,6 +38,7 @@ const CadastroForm = () => {
         <div className="centralizar">
           <center>
             <h2>Cadastro</h2>
+            <br/>
             <form onSubmit={enviarFormulario} >
               <input type="text" placeholder="Nome" id="name" required />
               <input type="text" placeholder="Endereço" id="address" required />
