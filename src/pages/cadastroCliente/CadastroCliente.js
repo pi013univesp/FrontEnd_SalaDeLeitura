@@ -65,7 +65,7 @@ const CadastroCliente = () => {
                             Cadastrar
                         </button>
 
-                    </form>
+                    </form>                    
                 </center>
             </div>
         </>

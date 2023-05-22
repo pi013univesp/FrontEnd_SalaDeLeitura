@@ -196,6 +196,9 @@ nav a:hover {
     width: 350px;
   }.CadLivrosLateralesq input {
     height: 25px;
+    margin-left: 10px;
+  }.CadLivrosLateralesq span {
+    margin-left: 10px;
   }
   
 .CadLivrosLateraldir {
