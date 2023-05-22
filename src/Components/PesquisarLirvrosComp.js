@@ -41,16 +41,16 @@ const PesquisarLivrosComp = () => {
         <div>
                 <table className="ListaEmprestimos">
                     <tr >
-                        <td><h3>Titulo</h3></td>
+                        <td><h3>Título</h3></td>
                         <td><h3>Autor</h3></td>
                         <td><h3>Editora</h3></td>
-                        <td><h3>Especie</h3></td>
+                        <td><h3>Espécie</h3></td>
                         <td><h3>Data</h3></td>
                         <td><h3>Tombo</h3></td>
-                        <td><h3>Procedencia</h3></td>
+                        <td><h3>Procedência</h3></td>
                         <td><h3>Estoque</h3></td>
                         <td><h3>Emprestados</h3></td>
-                        <td><h3>Estoque disponivel</h3></td>
+                        <td><h3>Estoque disponível</h3></td>
                     </tr>
                     {
                         livros.length > 0 && livros.map((item) => {

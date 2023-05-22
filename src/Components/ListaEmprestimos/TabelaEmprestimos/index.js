@@ -49,9 +49,9 @@ export const TabelaEmprestimos = () => {
                     <td><h3>Data do aluguel</h3></td>
                     <td><h3>Data final</h3></td>
                     <td><h3>Devolvido</h3></td>
-                    <td><h3>Titulo</h3></td>
+                    <td><h3>Título</h3></td>
                     <td><h3>Cliente</h3></td>
-                    <td><h3>Finalizar emprestimo</h3></td>
+                    <td><h3>Finalizar empréstimo</h3></td>
                 </tr>
                 {
                     alugueis.length > 0 && alugueis.map((item) => {

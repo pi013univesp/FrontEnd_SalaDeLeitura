@@ -36,9 +36,11 @@ input {
   background-color: #1c1c1a;
   cursor: pointer;
   font-family: 'Lora';
+  box-shadow: 4px 7px 5px rgb(140, 115, 82);
 }
 .botao1:hover {
   background-color: black;
+  color: rgb(140, 115, 82);
 }
 
 .centralizar {
@@ -221,10 +223,14 @@ nav a:hover {
   border: none;
   background-color: #1c1c1a;
   margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold;
   font-family: 'Lora';
+  box-shadow: 4px 7px 5px #825e33;
 }
 .botao2:hover {
   background-color: black;
+  color:#6a4e2b;
 }
 .BotaoEditar {
   display: flex;
@@ -347,7 +353,7 @@ nav a:hover {
 }
 .ListaEmprestimos tr td{
   width: 160px;
-  border: black solid 1px;
+
   background-color: #ffffff;
   text-align: center;
   font-family: 'Lora';
