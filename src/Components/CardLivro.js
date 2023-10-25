@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from 'react-elastic-carousel';
 import './carousel.css';
+import { Link } from "react-router-dom";
 
 export default function CardLivro() {
   const breakPoints = [
@@ -11,7 +12,7 @@ export default function CardLivro() {
     { 
       id: 0,
       link: "https://m.media-amazon.com/images/I/81PHloIwKnL.jpg",
-      alt: "capa livro harry potter e as reliquias da morte"
+      alt: "capa livro harry potter e as reliquias da morte",
     },
     { 
       id: 1,
@@ -59,7 +60,7 @@ export default function CardLivro() {
       alt: "capa livro harry potter e a pedra filosofal"
     },
   ]
-
+  
   return (
     <div className="Card_livro">
       <center>
@@ -76,6 +77,7 @@ export default function CardLivro() {
               })
             }
           </Carousel>
+          <Link to="/Forum" className="LinkForum" > Participe dos Nossos fórums literários </Link>
         </div>
       </center>
     </div>
