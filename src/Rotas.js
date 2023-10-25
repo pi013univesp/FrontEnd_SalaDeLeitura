@@ -12,6 +12,8 @@ import Emprestimos from "./pages/Emprestimos";
 import PesquisarLivros from "./pages/PesquisarLivros";
 import CadastroCliente from "./pages/cadastroCliente/CadastroCliente";
 import { EditarCliente } from "./pages/editarCliente/EditarCliente";
+import Forum from "./pages/Forum";
+import Cadaforum from "./pages/Cadaforum";
 
 const Rotas = () => {
     return (
@@ -26,6 +28,8 @@ const Rotas = () => {
             <Route element={<Container><PesquisarLivros /></Container>}      path="/pesquisar-livros" />
             <Route element={<Container><CadastroCliente /></Container>}      path="/cadastro-cliente" />
             <Route element={<Container><EditarCliente /></Container>}   path="/editar-cliente/:id" />
+            <Route element={<Container><Forum /></Container>}      path="/forum" />
+            <Route element={<Container><Cadaforum /></Container>}      path="/Cada-forum" />
         </Routes>
     )
 }

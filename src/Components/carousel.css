@@ -44,6 +44,14 @@ h2 {
   margin-bottom: -60px;;
   font-family: Cinzel;
 }
+.LinkForum {
+  display: flex;
+  font-family: cinzel;
+  color:#d2b48dd2;
+  margin-top: -5px;
+  margin-bottom: -15px;
+  justify-content: center;
+}
 p {
     color: #606060;
     margin-top: 30px;
