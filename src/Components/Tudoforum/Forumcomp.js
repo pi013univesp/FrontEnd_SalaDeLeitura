@@ -57,7 +57,7 @@ function Forumcomp() {
         <>
             <div className="Escrevercomentario">
                 <form onSubmit={enviarComentario}>
-                    <h2>Fórum 1</h2>
+                    <h2>Fórum {id}</h2>
                     <br />
                     <p>Nome de usuário:</p>
                     <input 
