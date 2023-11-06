@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from 'react-elastic-carousel';
 import './carousel.css';
+import { Link } from "react-router-dom";
 
 export default function CardLivro() {
   const breakPoints = [
@@ -76,6 +77,7 @@ export default function CardLivro() {
               })
             }
           </Carousel>
+          <Link to="/Forum" className="LinkForum" > Participe dos Nossos fórums literários </Link>
         </div>
       </center>
     </div>

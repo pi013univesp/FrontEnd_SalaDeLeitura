@@ -1,0 +1,92 @@
+.capaforum {
+    display: flex;
+    height: 80px;
+    width: 80px;
+    background-color: #ae7c3d ;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.Listaforums {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    max-width: 50%;
+    justify-content: center;
+
+
+} 
+.titulopagforum {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+p {
+    margin-top: -10px;
+    color: #ffffff;
+}
+
+/* Forumcomp */
+
+.Escrevercomentario {
+    background-color: #ae7c3d;
+    width: 806px;
+    height: 100%;
+    font-family: 'Lora';    
+    padding: 0px 20px;
+
+}
+.Areatexto {
+    background-color: #fce4c8;
+    width: 100%;
+    height: 100px;
+}
+.AreatextoNome {
+    background-color: #fce4c8;
+    width: 100%;
+    height: 40px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 147px;
+    height: 33px;
+    color: burlywood;
+    border: none;
+    background-color: #1c1c1a;
+    cursor: pointer;
+    font-family: 'Lora';
+    box-shadow: 4px 7px 5px rgb(140, 115, 82);
+    margin-bottom: 30px;
+  }
+  button:hover {
+    background-color: black;
+    color: rgb(140, 115, 82);
+  }
+
+.comentariosescritos {
+    background-color: #976833;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+.secaocomentario {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.Perfil {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-top: 3px;
+}
