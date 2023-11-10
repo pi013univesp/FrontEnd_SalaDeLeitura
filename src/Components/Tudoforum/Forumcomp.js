@@ -66,7 +66,7 @@ function Forumcomp() {
                         type="text"
                         name="nome"
                     />
-                    <p>escreva aqui uma mensagem:</p>
+                    <p>Escreva aqui uma mensagem:</p>
                     <textarea 
                         className="Areatexto"
                         id="coment"
