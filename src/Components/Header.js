@@ -28,7 +28,7 @@ function Header() {
         <div className="logo">
           <h1>
             <Link to="/" className="logoLink">
-              Sala de Leitura
+              Sala de Leitura para todos
             </Link>
           </h1>
         </div>

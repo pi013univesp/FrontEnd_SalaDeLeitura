@@ -11,13 +11,13 @@ export default function CardLivro() {
   const fotos = [
     { 
       id: 0,
-      link: "https://m.media-amazon.com/images/I/81PHloIwKnL.jpg",
-      alt: "capa livro harry potter e as reliquias da morte"
+      link: "https://m.media-amazon.com/images/I/819DY12SBLL._AC_UF1000,1000_QL80_.jpg",
+      alt: "Capa livro a bússola de ouro"
     },
     { 
       id: 1,
-      link: "https://a-static.mlcdn.com.br/800x560/livro-alice-no-pais-das-maravilhas-capa-brochura-com-verniz-localizado-editora-carvalho-mais-poster/carvalhoeditora/edit-007/82dee9b8f3c17d9ad171998426fb42e0.jpeg",
-      alt: "capa livro alice no pais das maravilhas"
+      link: "https://5934488p.ha.azioncdn.net/capas-livros/9788508045242-julio-verne-viagem-ao-centro-da-terra-serie-eu-leio-529101343.jpg",
+      alt: "Viagem ao centro da terra"
     },
     { 
       id: 2,
@@ -31,8 +31,8 @@ export default function CardLivro() {
     },
     { 
       id: 4,
-      link: "http://s2.glbimg.com/ZTYbsZ1FOccT-63DFFpRf_-9kLk=/e.glbimg.com/og/ed/f/original/2017/07/03/179547_1gg.jpg",
-      alt: "capa livro harry potter e a pedra filosofal"
+      link: "https://m.media-amazon.com/images/I/71ldz8QXgkL._AC_UF1000,1000_QL80_.jpg",
+      alt: "Frankeinstein"
     },
     { 
       id: 5,
@@ -77,7 +77,7 @@ export default function CardLivro() {
               })
             }
           </Carousel>
-          <Link to="/Forum" className="LinkForum" > Participe dos Nossos fórums literários </Link>
+          <Link to="/Forum" className="LinkForum" > Participe dos Nossos fóruns literários </Link>
         </div>
       </center>
     </div>

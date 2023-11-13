@@ -6,8 +6,9 @@ const LinkForum = ( {id} ) => {
   return (
     <ul>
       <Link to={`/cada-forum/${id}`}>
-        <div className="capaforum"> {id} </div>
-        <p> Forum {id} </p>
+        <div className="capaforum">
+          {id} </div>
+        <p> Fórum {id} </p>
       </Link>
     </ul>
   )
@@ -20,7 +21,8 @@ function Homeforum() {
     <>
       <div className=''>
         <center>
-          <h1 className='titulopagforum'>Fórums temáticos:</h1>
+          <h2 className='titulopagforum'>Fóruns temáticos:</h2>
+          
           <div className='Listaforums'>
             {
               numForuns.map(element => (
@@ -29,6 +31,7 @@ function Homeforum() {
             }
           </div>
         </center>
+        <br /> <br />
       </div>
     </>
   );
