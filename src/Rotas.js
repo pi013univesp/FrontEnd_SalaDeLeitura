@@ -14,6 +14,9 @@ import CadastroCliente from "./pages/cadastroCliente/CadastroCliente";
 import { EditarCliente } from "./pages/editarCliente/EditarCliente";
 import Forum from "./pages/Forum";
 import Cadaforum from "./pages/Cadaforum";
+import Trilhas from "./pages/Trilha/Trilhas";
+import TrilhaEspecifica from "./pages/Trilha/TrilhaEspecifica"
+import TrilhasP from "./pages/Trilha/TrilhasP";
 
 const Rotas = () => {
     return (
@@ -30,6 +33,9 @@ const Rotas = () => {
             <Route element={<Container><EditarCliente /></Container>}   path="/editar-cliente/:id" />
             <Route element={<Container><Forum /></Container>}      path="/forum" />
             <Route element={<Container><Cadaforum /></Container>}      path="/Cada-forum/:id" />
+            <Route element={<Container><Trilhas /></Container>}      path="/trilhas" />
+            <Route element={<Container><TrilhaEspecifica /></Container>}      path="/trilha/:id/:name" />
+            <Route element={<Container><TrilhasP /></Container>}      path="/trilhasp" />
         </Routes>
     )
 }

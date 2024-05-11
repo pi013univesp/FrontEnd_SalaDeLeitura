@@ -21,6 +21,9 @@ const Menu = () => {
                 <li>
                     <Link to='/emprestimos'>Empréstimos</Link>
                 </li>
+                <li>
+                    <Link to='/trilhas'>Trilhas</Link>
+                </li>
             </ul>
             {/* <div className='Buscar'>
             <h3>Buscar: </h3>

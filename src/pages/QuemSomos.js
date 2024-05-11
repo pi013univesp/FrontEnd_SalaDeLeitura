@@ -1,11 +1,11 @@
 import React from "react";
-import QuemSomosComp from "../Components/QuemSomosComp";
+import QuemSomosPi3 from "../Components/QuemSomosPI3";
 import "../App.css";
 
 const QuemSomos = () => {
 
     return (
-        <QuemSomosComp />
+        <QuemSomosPi3 />
     );
 }
 
