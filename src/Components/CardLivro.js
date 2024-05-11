@@ -77,7 +77,12 @@ export default function CardLivro() {
               })
             }
           </Carousel>
+          
+          <h1 style={{marginBottom: "60px", marginTop: "40px"}}><Link to="/trilhasp" className="LinkForum" >Conheça nossas trilhas de estudos</Link></h1>
+
           <Link to="/Forum" className="LinkForum" > Participe dos Nossos fóruns literários </Link>
+          
+
         </div>
       </center>
     </div>

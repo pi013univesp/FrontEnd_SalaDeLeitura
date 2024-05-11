@@ -184,6 +184,8 @@ nav a:hover {
   padding-top: 0px;
 }
 .PesquisarLivros {
+  overflow-y: auto;
+  max-height: 450px;
   top: 10rem;
   right: 7rem;
   background-color: #AE7C3D;
@@ -324,7 +326,7 @@ nav a:hover {
   width: 815px;
   height: 450px;
   padding-left: 10px;
-  padding-top: 0px;
+  padding-top: 20px;
   overflow-y: scroll;
   border-bottom: #AE7C3D solid 5px ;
   font-family: 'Lora';
@@ -356,6 +358,45 @@ nav a:hover {
 }
 .ListaEmprestimos tr td{
   width: 160px;
+
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Lora';
+}
+
+/*tabela trilhas*/
+
+
+.DadosTrilha table {
+  width: 100%;
+  padding: 0px;
+  font-family: 'Lora';
+}
+
+.ListaTrilha tr {
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Lora';
+  justify-content: center;
+}
+
+.ListaTrilha td{
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Lora';
+  justify-content: center;
+}
+
+.BotaoLegal {
+  width: 300px;
+  background-color: #000000;
+  text-align: center;
+  font-family: 'Lora';
+  justify-content: center;
+}
+
+.Listatrilha tr td{
+  width: 197px;
 
   background-color: #ffffff;
   text-align: center;
