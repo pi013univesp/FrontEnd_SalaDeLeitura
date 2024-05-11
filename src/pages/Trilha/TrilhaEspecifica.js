@@ -9,14 +9,14 @@ const TrilhaEspecifica = () => {
 
     const { id, name } = useParams();
 
-    async function buscaLivros(){
+    async function buscaLivros(id){
         const url = await api.get(`/trilha/${id}`)
         setLivros(url.data.data)
     }
 
     useEffect(() => {
-        buscaLivros()
-    }, [])
+        buscaLivros(id)
+    }, [id])
 
     return (
         <div className="PesquisarLivros">
