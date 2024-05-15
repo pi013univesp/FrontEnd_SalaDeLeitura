@@ -17,6 +17,7 @@ import Cadaforum from "./pages/Cadaforum";
 import Trilhas from "./pages/Trilha/Trilhas";
 import TrilhaEspecifica from "./pages/Trilha/TrilhaEspecifica"
 import TrilhasP from "./pages/Trilha/TrilhasP";
+import MaisAlugados from "./pages/MaisAlugados";
 
 const Rotas = () => {
     return (
@@ -36,6 +37,7 @@ const Rotas = () => {
             <Route element={<Container><Trilhas /></Container>}      path="/trilhas" />
             <Route element={<Container><TrilhaEspecifica /></Container>}      path="/trilha/:id/:name" />
             <Route element={<Container><TrilhasP /></Container>}      path="/trilhasp" />
+            <Route element={<Container><MaisAlugados /></Container>}      path="/mais-alugados" />
         </Routes>
     )
 }

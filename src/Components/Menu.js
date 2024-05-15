@@ -24,12 +24,10 @@ const Menu = () => {
                 <li>
                     <Link to='/trilhas'>Trilhas</Link>
                 </li>
+                <li>
+                    <Link to='/mais-alugados'>Mais alugados</Link>
+                </li>
             </ul>
-            {/* <div className='Buscar'>
-            <h3>Buscar: </h3>
-            <input></input>
-
-            </div> */}
         </nav>
         </center>
     );
